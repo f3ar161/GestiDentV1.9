@@ -33,7 +33,7 @@ public class pacienteControl {
             apellido= p.getApellidosPaciente();
             correo= p.getEmailPaciente();
             password2 = p.getPasswordPaciente();
-            return "home2";
+            return "/cita/List";
         } else {
             return "index";
         }

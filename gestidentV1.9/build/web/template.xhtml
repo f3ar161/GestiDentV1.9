@@ -18,9 +18,14 @@
         <p:layout fullPage="true">
             <p:layoutUnit position="north" size="65" header="#{bundle.AppName}">
                 <h:form id="menuForm">
+                    <h5 align="right" >
+                        <h:outputLabel value="Bienvenido al Sistema: #{usuariop.nombre} #{usuariop.apellido}"/>
+                    </h5>
+                    
+                    
                     <p:menubar>
-                        <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
-                        <p:submenu label="#{bundle.Maintenance}">
+                        <p:menuitem value="#{bundle.Home}" outcome="/paciente/index" icon="ui-icon-home"/>
+                        <p:submenu rendered="null" label="#{bundle.Maintenance}">
                             <p:menuitem value="Administrador" outcome="/administrador/List.xhtml" />
                             <p:menuitem value="Cita" outcome="/cita/List.xhtml" />
                             <p:menuitem value="Doctor" outcome="/doctor/List.xhtml" />

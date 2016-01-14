@@ -9,6 +9,8 @@
     <ui:composition template="/template_1.xhtml">
         <ui:define name="title">
             <h:outputText value="GestiDent"></h:outputText>
+            <!--<h:outputStylesheet name="/resources/css/index.css"/>-->
+            
         </ui:define>
 
         <ui:define name="body">
@@ -17,11 +19,11 @@
                     <p:button icon="ui-icon-key" outcome="/faces/Login.xhtml" value="Login"></p:button>
                     <p:commandButton id="createButton" icon="ui-icon-plus" value="Registrar" actionListener="#{pacienteController.prepareCreate}" update=":PacienteCreateForm" oncomplete="PF('PacienteCreateDialog').show()"/>
                 </H5>
-                
+
             </h:form>
-            
+
             <h:form id="PacienteListForm">
-                
+
 <!--                <p:panel header="#{bundle.ListPacienteTitle}">-->
                 <p:dataTable id="datalist" value=""
                              >
@@ -33,7 +35,11 @@
             </h:form>
 
             <ui:include src="Create.xhtml"/>
-
+<!--            <br align="center">
+            <p:galleria value="#{imagesView.images}" var="image" panelWidth="1300" panelHeight="500" showCaption="true">
+                <p:graphicImage name="/faces/resources/css/Galeria/#{image}" alt="Gestident #{image}" title="#{image}"/>
+            </p:galleria>
+            </br>-->
         </ui:define>
     </ui:composition>
 

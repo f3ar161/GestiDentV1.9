@@ -21,9 +21,9 @@
                         <h:outputText value="#{bundle.ViewCitaLabel_estadoCita}"/>
                         <h:outputText value="#{citaController.selected.estadoCita}" title="#{bundle.ViewCitaTitle_estadoCita}"/>
                         <h:outputText value="#{bundle.ViewCitaLabel_doctorIDDOCTOR}"/>
-                        <h:outputText value="#{citaController.selected.doctorIDDOCTOR}" title="#{bundle.ViewCitaTitle_doctorIDDOCTOR}"/>
+                        <h:outputText value="#{citaController.selected.doctorIDDOCTOR.nombresDoctor} #{citaController.selected.doctorIDDOCTOR.apellidosDoctor}" title="#{bundle.ViewCitaTitle_doctorIDDOCTOR}"/>
                         <h:outputText value="#{bundle.ViewCitaLabel_pacienteIDPACIENTE}"/>
-                        <h:outputText value="#{citaController.selected.pacienteIDPACIENTE}" title="#{bundle.ViewCitaTitle_pacienteIDPACIENTE}"/>
+                        <h:outputText value="#{citaController.selected.pacienteIDPACIENTE.nombresPaciente} #{citaController.selected.pacienteIDPACIENTE.apellidosPaciente}" title="#{bundle.ViewCitaTitle_pacienteIDPACIENTE}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{bundle.Close}" onclick="CitaViewDialog.hide()"/>
                 </h:panelGroup>

@@ -9,7 +9,6 @@ package modelo;
  *
  * @author stand
  */
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
@@ -23,11 +22,13 @@ public class ImagesView {
     @PostConstruct
     public void init() {
         images = new ArrayList<String>();
+        images.add("1.jpg");
+        images.add("2.jpg");
+        images.add("3.jpg");/*
         for (int i = 1; i <= 3; i++) {
             images.add(i + ".jpg");
-        }
+        }*/
     }
- 
     public List<String> getImages() {
         return images;
     }
